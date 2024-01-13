@@ -1,6 +1,5 @@
 package com.example.pocfavapp.dialog
 
-import android.graphics.Bitmap
 import android.os.Build
 import android.os.Bundle
 import android.os.Parcelable
@@ -14,6 +13,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
 import com.example.pocfavapp.R
 import com.example.pocfavapp.databinding.DialogFavoriteGuideLineBinding
+import com.example.pocfavapp.utils.BitmapUtils
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
@@ -22,7 +22,7 @@ data class Fav(
     val bottom: Int,
     val left: Int,
     val right: Int,
-    val bm: Bitmap
+    val bmStr: String
 ) : Parcelable
 
 class FavoriteGuidelineDialog : DialogFragment() {
@@ -63,7 +63,7 @@ class FavoriteGuidelineDialog : DialogFragment() {
                     left = this@run.left
                     right = this@run.right
 
-                    setImageBitmap(this@run.bm)
+                    setImageBitmap(BitmapUtils.decodeStringToBitmap(this@run.bmStr))
                 }
 
                 Log.d(

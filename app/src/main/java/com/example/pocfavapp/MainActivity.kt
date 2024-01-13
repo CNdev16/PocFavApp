@@ -12,10 +12,11 @@ import androidx.core.view.doOnLayout
 import androidx.databinding.DataBindingUtil
 import com.example.pocfavapp.adapter.Item
 import com.example.pocfavapp.adapter.ItemAdapter
+import com.example.pocfavapp.databinding.ActivityMainBinding
 import com.example.pocfavapp.dialog.Fav
 import com.example.pocfavapp.dialog.FavoriteGuidelineDialog
-import com.example.pocfavapp.databinding.ActivityMainBinding
 import com.example.pocfavapp.extensions.getStatusBarHeight
+import com.example.pocfavapp.utils.BitmapUtils
 
 val View.screenLocation
     get(): IntArray {
@@ -84,7 +85,7 @@ class MainActivity : AppCompatActivity() {
                         bottom = box.bottom - statusBarHeight,
                         left = box.left,
                         right = box.right,
-                        bm = getBitmapFromView(cardViewItem)
+                        bmStr = BitmapUtils.encodeBitmapToString(getBitmapFromView(cardViewItem))
                     )
                     FavoriteGuidelineDialog.newInstance(fav).show(
                         supportFragmentManager,
