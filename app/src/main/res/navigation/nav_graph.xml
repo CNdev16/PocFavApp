@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/hostFragment">
+
+    <action
+        android:id="@+id/navigate_to_detailFragment"
+        app:destination="@+id/detailFragment" />
+
+    <action
+        android:id="@+id/navigate_to_favoriteFragment"
+        app:destination="@+id/favoriteFragment" />
+
+    <fragment
+        android:id="@+id/hostFragment"
+        android:name="com.example.pocfavapp.HostFragment"
+        android:label="Host"
+        tools:layout="@layout/fragment_host" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.pocfavapp.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.pocfavapp.detail.DetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail" />
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.pocfavapp.favorite.FavoriteFragment"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_favorite" />
+
+
+</navigation>

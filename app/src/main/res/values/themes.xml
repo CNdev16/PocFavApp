@@ -11,6 +11,10 @@
         <item name="cornerSize">12%</item>
     </style>
 
+    <style name="RoundedImageView1">
+        <item name="cornerSize">8%</item>
+    </style>
+
     <style name="DialogTheme" parent="Theme.PocFavApp">
 <!--        <item name="android:windowNoTitle">true</item>-->
 <!--        <item name="android:windowFullscreen">false</item>-->

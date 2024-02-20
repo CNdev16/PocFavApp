@@ -7,4 +7,5 @@
     <color name="background800">#424242</color>
     <color name="background900">#212121</color>
     <color name="overlay">#BF000000</color>
+    <color name="red">#E91E63</color>
 </resources>
